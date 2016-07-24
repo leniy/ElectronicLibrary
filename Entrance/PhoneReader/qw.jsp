@@ -29,7 +29,7 @@
 	document.onreadystatechange = function () {
 	if (document.readyState == "complete") {
 		EPUBJS.filePath = "js/libs/";
-		EPUBJS.cssPath = window.location.href.replace(window.location.hash, '').replace('qw.jsp', '') + "css/";
+		EPUBJS.cssPath = window.location.href.replace(window.location.hash, '').replace('qw.jsp?ebookuuid=<%=ebookuuid%>', '') + "css/";
 		window.reader = ePubReader("../../<%=ebook.getUrl()%>");
 	}
 	};
