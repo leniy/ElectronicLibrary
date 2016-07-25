@@ -33,6 +33,12 @@
 		window.reader = ePubReader("../../<%=ebook.getUrl()%>");
 	}
 	};
+	$(function(){
+		$("#viewer iframe").on("load",function(){
+			$("#viewer iframe").contents().find("body").css('background','white');
+			$("#viewer iframe").contents().find(".cover").css('padding','0px');
+		});
+	});
 	</script>
 	<script src="js/libs/screenfull.min.js"></script>
 	<script src="js/epub.min.js"></script>
@@ -52,14 +58,12 @@
 				<span id="chapter-title"></span>
 			</div>
 		</div>
-
-	<div id="divider"></div>
-	<div id="prev" class="arrow">‹</div>
-	<div id="viewer"></div>
-	<div id="next" class="arrow">›</div>
-
-	<div id="loader"><img src="img/loader.gif"></div>
-  </div>
-  <div class="overlay"></div>
+		<div id="divider"></div>
+		<div id="prev" class="arrow">‹</div>
+		<div id="viewer"></div>
+		<div id="next" class="arrow">›</div>
+		<div id="loader"><img src="img/loader.gif"></div>
+	</div>
+	<div class="overlay"></div>
 </body>
 </html>
