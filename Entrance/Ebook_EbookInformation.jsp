@@ -103,7 +103,7 @@ document.onkeydown = grabEvent;
 	jQuery('#qrcodeCanvas').qrcode({
 		width:180,
 		height:180,
-		text	: "http://172.29.0.108:8010/Ebook_stb_sdjn/Entrance/PhoneReader/qw.jsp?ebookuuid=<%=ebookuuid%>"
+		text	: "http://172.29.0.108:8010/Ebook_stb_sdjn/Entrance/PhoneReader/Ebook.jsp?ebookuuid=<%=ebookuuid%>"
 	});
 	</script>
 </div>
